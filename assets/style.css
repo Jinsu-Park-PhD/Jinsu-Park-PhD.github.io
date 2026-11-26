@@ -147,7 +147,7 @@ footer {
 @media print {
   html[lang="en"] { --plh: 1.40; --psec: 5.5mm; --pitem: 6px; }
   html[lang="ko"] { --plh: 1.80; --psec: 7.5mm; --pitem: 9px; }
-  nav, details summary, .cv-link { display: none; }
+  nav, details summary { display: none; }
   details > * { display: block; }
   body { font-size: 10.2pt; line-height: var(--plh, 1.34); }
   html[lang="ko"] body { font-size: 9.3pt; line-height: var(--plh, 1.62); }
