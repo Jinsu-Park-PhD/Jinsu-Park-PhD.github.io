@@ -68,7 +68,8 @@ html[lang="ko"] .hero-label { font-size: 14px; letter-spacing: .04em; }
 .links { display: grid; gap: 2px; margin: 0; }
 .links a { color: var(--ink); }
 .links a:hover { color: var(--accent); }
-.links a .k {
+.links .sep { color: var(--faint); }
+.links .k {
   display: inline-block; width: 88px; color: var(--faint);
   font-variant: small-caps; letter-spacing: .06em; font-size: .9em;
 }
@@ -169,5 +170,6 @@ footer {
   .row .when { text-align: right; }
   .jmp { padding: 6px 0; }
   h2, h3 { break-after: avoid; }
+  .hero p:not(.role):not(.hero-label) { display: none; }
   footer { max-width: none; padding: 2mm 0 0; font-size: 8.5pt; border-top: 0; }
 }
