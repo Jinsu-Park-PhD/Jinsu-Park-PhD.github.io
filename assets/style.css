@@ -141,10 +141,30 @@ footer {
   .row .when { text-align: left; }
 }
 
+@page { size: A4; margin: 15mm 16mm 16mm; }
 @media print {
   nav, details summary { display: none; }
   details > * { display: block; }
-  body { font-size: 11pt; }
+  body { font-size: 10.5pt; line-height: 1.42; }
+  html[lang="ko"] body { font-size: 9.3pt; line-height: 1.62; }
   a { color: var(--ink); }
-  section, .hero { break-inside: auto; }
+  main { max-width: none; padding: 0; }
+  .hero { grid-template-columns: 1fr 30mm; gap: 10mm; padding: 0 0 6mm; }
+  .hero img { order: 2; width: 30mm; height: 40mm; }
+  .hero h1 { font-size: 26pt; }
+  .hero h1 .alt-name { font-size: 14pt; }
+  .hero .role { font-size: 11pt; margin: 4px 0 10px; }
+  html[lang="ko"] .hero .role { font-size: 9.5pt; }
+  .hero .hero-label { margin: 10px 0 3px; }
+  section { grid-template-columns: 32mm 1fr; column-gap: 7mm; padding: 5mm 0 1mm; }
+  section > *, section > h2 { grid-column: 2; }
+  section > h2 { grid-column: 1; grid-row: 1 / span 60; margin-bottom: 0; }
+  h2 { font-size: 11pt; }
+  html[lang="ko"] h2 { font-size: 10pt; }
+  h3 { margin: 10px 0 4px; }
+  ol.pubs li, ul.plain li { margin-bottom: 6px; break-inside: avoid; }
+  .row { grid-template-columns: 1fr 31mm; gap: 4mm; }
+  .row .when { text-align: right; }
+  .jmp { padding: 6px 0; }
+  footer { max-width: none; padding: 4mm 0 0; font-size: 8.5pt; }
 }
